@@ -1,7 +1,7 @@
 #ifndef SYNC_H
 #define SYNC_H
 
-// ½ø³ÌÍ¬²½Óë²¢·¢¿ØÖÆÄ£¿é²Ëµ¥Èë¿Ú
+// è¿›ç¨‹åŒæ­¥ä¸å¹¶å‘æ§åˆ¶æ¨¡å—èœå•å…¥å£
 void sync_menu();
 
 #endif

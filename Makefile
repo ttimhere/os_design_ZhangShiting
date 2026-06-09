@@ -1,39 +1,34 @@
-# 编译器
-CC = gcc
+# 缂栬瘧鍣?CC = gcc
 
-# 编译选项
+# 缂栬瘧閫夐」
 CFLAGS = -Wall -g -Iinclude
 
-# pthread 用于进程同步与并发控制模块
-LDFLAGS = -pthread
+# pthread 鐢ㄤ簬杩涚▼鍚屾涓庡苟鍙戞帶鍒舵ā鍧?LDFLAGS = -pthread
 
-# 可执行文件名称
-TARGET = os_zst
+# 鍙墽琛屾枃浠跺悕绉?TARGET = os_zst
 
-# 源文件
-SRCS = src/main.c \
+# 婧愭枃浠?SRCS = src/main.c \
        src/scheduler.c \
        src/memory.c \
        src/sync.c \
        src/filesystem.c
 
-# 目标文件
+# 鐩爣鏂囦欢
 OBJS = $(SRCS:.c=.o)
 
-# 默认目标
+# 榛樿鐩爣
 all: $(TARGET)
 
-# 链接生成可执行文件
-$(TARGET): $(OBJS)
+# 閾炬帴鐢熸垚鍙墽琛屾枃浠?$(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS) $(LDFLAGS)
 
-# 编译 .c 文件为 .o 文件
+# 缂栬瘧 .c 鏂囦欢涓?.o 鏂囦欢
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# 清理编译结果
+# 娓呯悊缂栬瘧缁撴灉
 clean:
 	rm -f $(OBJS) $(TARGET)
 
-# 重新编译
+# 閲嶆柊缂栬瘧
 rebuild: clean all

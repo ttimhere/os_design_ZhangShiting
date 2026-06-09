@@ -1,7 +1,7 @@
 #ifndef MEMORY_H
 #define MEMORY_H
 
-// 内存管理模块菜单入口
+// 鍐呭瓨绠＄悊妯″潡鑿滃崟鍏ュ彛
 void memory_menu();
 
 #endif
